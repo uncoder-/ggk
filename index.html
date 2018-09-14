@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=0">
@@ -8,52 +9,52 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<title>响应式布局模板</title>
 	<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing:border-box;
-		-webkit-box-sizing : border-box;  
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
-		-webkit-overflow-scrolling: touch;
-	}
-	html,body{
-		position: relative;
-		margin: auto;
-		height: 100%;
-		width: 100%;
-	}
-	img{
-		max-width: 100%;
-	}
-	#main{
-		padding: 5px 5px;
-	}
-	.ggk{
-		position: relative;
-	}
-	canvas{
-		position: absolute;
-		top: 0;
-		left: 0;
-		border:1px solid red;
-	}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webkit-overflow-scrolling: touch;
+		}
+
+		html,
+		body {
+			position: relative;
+			margin: auto;
+			height: 100%;
+			width: 100%;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		#main {
+			padding: 5px 5px;
+		}
+
+		.ggk {
+			position: relative;
+		}
+
+		canvas {
+			border: 1px solid red;
+		}
 	</style>
 </head>
+
 <body>
 	<section id="main">
-		<div class="ggk">
-			<canvas id="ctx" height="300" width="300"></canvas>
-			<canvas id="cl_ctx" height="300" width="300"></canvas>
-		</div>
+		<div class="ggk"></div>
 	</section>
-<script type="text/javascript" src="ggk.js"></script>
-<script type="text/javascript">
-	var ggk = new ggk({
-		"selector":"#ctx",
-		"cover":"#cl_ctx",
-		"text":"优惠码：3838383"
-	});
-	console.dir(ggk);
-</script>
+	<script type="text/javascript" src="ggk-es.js"></script>
+	<script type="text/javascript">
+		var ggk = new GGK({
+			'container': document.querySelector('.ggk'),
+			'text': '一等奖哟'
+		});
+	</script>
 </body>
+
 </html>
